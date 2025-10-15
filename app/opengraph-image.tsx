@@ -1,0 +1,66 @@
+import { ImageResponse } from 'next/og'
+
+export const runtime = 'edge'
+export const alt = 'PrivateLimo - Servicio Premium de Transporte Ejecutivo'
+export const size = {
+  width: 1200,
+  height: 630,
+}
+export const contentType = 'image/png'
+
+export default async function Image() {
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#161E30',
+          padding: '40px',
+        }}
+      >
+        {/* Logo SVG Path */}
+        <svg width="160" height="170" viewBox="0 0 32 34" fill="none">
+          <path
+            d="M23.3522 32.7925H19.9596C18.8176 32.7925 17.8903 31.8655 17.8903 30.7209V22.1462H19.6701C28.1517 22.1462 31.8756 17.755 31.8756 12.5782C31.8756 9.22354 29.7242 4.54262 20.2908 4.54262H18.1768C18.4159 2.595 18.8349 0.944348 19.5463 0.706482V0.126953H11.8509V0.706482C12.5623 0.944348 12.9813 2.595 13.2204 4.54262H0.125V5.12215C1.49012 5.5777 1.77956 6.82037 1.77956 9.80307V28.2774C1.77956 31.2601 1.49012 32.5027 0.125 32.9583V33.5378H7.82036V32.9583C6.45524 32.5027 6.1658 31.2601 6.1658 28.2774V22.1462H13.5069V28.2774C13.5069 31.2601 13.2175 32.5027 11.8524 32.9583V33.5378H31.5472L31.8784 28.3192L31.3399 28.237C29.6853 31.7992 27.534 32.7939 23.3551 32.7939L23.3522 32.7925ZM18.9256 5.20576C25.4632 5.20576 27.2013 10.0943 27.2013 13.6565C27.2013 18.3374 24.8844 21.4859 19.4642 21.4859H17.8917V9.80307C17.8917 8.54887 17.9436 6.82181 18.1048 5.2072C18.5671 5.20576 18.868 5.20432 18.9271 5.20432L18.9256 5.20576ZM6.16436 21.4845V5.28793C6.32132 5.26487 9.94724 5.24324 13.2952 5.22739C13.4551 6.83623 13.5055 8.55463 13.5055 9.80307V21.4845H6.16436Z"
+            fill="#D4AF37"
+          />
+        </svg>
+
+        {/* Brand Name */}
+        <div
+          style={{
+            display: 'flex',
+            fontSize: 72,
+            fontWeight: 'bold',
+            color: '#D4AF37',
+            marginTop: '40px',
+            letterSpacing: '-0.02em',
+          }}
+        >
+          PrivateLimo
+        </div>
+
+        {/* Tagline */}
+        <div
+          style={{
+            display: 'flex',
+            fontSize: 32,
+            color: '#E5E7EB',
+            marginTop: '20px',
+            textAlign: 'center',
+          }}
+        >
+          Servicio Premium de Transporte Ejecutivo
+        </div>
+      </div>
+    ),
+    {
+      ...size,
+    }
+  )
+}

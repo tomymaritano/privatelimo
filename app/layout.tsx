@@ -22,8 +22,19 @@ export const metadata: Metadata = {
   keywords: "limusina, transporte ejecutivo, servicio premium, aeropuerto, eventos corporativos",
   openGraph: {
     title: "PrivateLimo - Servicio Premium de Transporte Ejecutivo",
-    description: "Experiencia de lujo en transporte ejecutivo",
+    description: "Experiencia de lujo en transporte ejecutivo. Servicio de limusinas y vehículos premium para aeropuertos, eventos corporativos y ocasiones especiales.",
     type: "website",
+    locale: "es_ES",
+    siteName: "PrivateLimo",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PrivateLimo - Servicio Premium de Transporte Ejecutivo",
+    description: "Experiencia de lujo en transporte ejecutivo. Servicio de limusinas y vehículos premium para aeropuertos, eventos corporativos y ocasiones especiales.",
+  },
+  icons: {
+    icon: "/logo.svg",
+    apple: "/logo.svg",
   },
 }
 
